@@ -1,0 +1,34 @@
+{
+  "name": "agencia_viajes",
+  "version": "1.0.0",
+  "description": "Agencia de Viajes con Node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianmartinez-dev/agenciaViajes.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "express",
+    "JavaScript",
+    "pug",
+    "bootstrap"
+  ],
+  "author": "Julian Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianmartinez-dev/agenciaViajes/issues"
+  },
+  "homepage": "https://github.com/julianmartinez-dev/agenciaViajes#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
