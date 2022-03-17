@@ -1,9 +1,10 @@
+import { Viaje } from '../models/Viaje.js';
 
 const paginaInicio = (req, res) => {
-  res.render('inicio',{
-    pagina: 'Inicio'
-  })
-}
+  res.render('inicio', {
+    pagina: 'Inicio',
+  });
+};
 
 const paginaNosotros = (req, res) => {
   res.render('nosotros', {
@@ -11,9 +12,13 @@ const paginaNosotros = (req, res) => {
   });
 };
 
-const paginaViajes = (req, res) => {
+const paginaViajes = async (req, res) => {
+  //Consultar la base de datos
+  const viajes = await Viaje.findAll();
+
   res.render('viajes', {
-    pagina: 'Viajes',
+    pagina: 'Próximos Viajes',
+    viajes
   });
 };
 
@@ -23,9 +28,4 @@ const paginaTestimoniales = (req, res) => {
   });
 };
 
-export {
-    paginaInicio,
-    paginaNosotros,
-    paginaViajes,
-    paginaTestimoniales
-}
+export { paginaInicio, paginaNosotros, paginaViajes, paginaTestimoniales };
