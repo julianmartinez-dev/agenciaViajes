@@ -6,7 +6,7 @@ const paginaInicio = async (req, res) => {
   
   const promiseDB = [];
   promiseDB.push(Viaje.findAll({ limit: 3 }));
-  promiseDB.push(Testimonial.findAll({limit: 3}));
+  promiseDB.push(Testimonial.findAll({ limit: 3}));
 
   try {
     const resultado = await Promise.all(promiseDB)
@@ -18,7 +18,7 @@ const paginaInicio = async (req, res) => {
       testimoniales: resultado[1]
     });
   } catch (error) {
-    console.error(erro)
+    console.error(error)
   }
   
 };
