@@ -5,21 +5,12 @@ block contenido
 
         blockquote.text-center Lee sobre nuestros clientes y sus experiencias
 
-        .row.testimoniales   
-            each testimonial in testimoniales
-                .col-md-6.col-lg-4.mb-4 
-                    .card 
-                        .card-body
-                            blockquote.blockquote 
-                            p.mb-0 
-                                | #{testimonial.mensaje}
-                            footer.blockquote-footer 
-                                | #{testimonial.nombre}
+        include ./layout/bloque_testimoniales   
 
         .row 
             .col-md-12
             
-                h2.d-block.w-100.text-center Agrega un testimonial
+                h2.d-block.w-100.text-center.mt-3 Agrega un testimonial
 
                 if(errores)
                     each error in errores
@@ -37,4 +28,4 @@ block contenido
                             .form-group 
                                 label(for="mensaje") Mensaje 
                                 textarea#mensaje(name="mensaje", cols="30", rows="10",class="form-control")=mensaje 
-                                input.btn.btn-success.btn-block(type="submit")
+                                input.btn.btn-success.btn-block.mt-3(type="submit")
