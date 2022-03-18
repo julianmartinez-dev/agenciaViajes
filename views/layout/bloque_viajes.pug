@@ -1,0 +1,34 @@
+.row.proximos-viajes
+    each viaje in viajes
+        .col-md-6.col-lg-4.mb-4 
+            .card 
+                img(src=`img/destinos_${viaje.imagen}.jpg`, alt="imagen destino", class="card-img-top")
+                .card-body
+                    h2=viaje.titulo
+                    p
+                        svg.icon.icon-tabler.icon-tabler-plane-departure.mr-2(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff4500' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                            path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                            path(d='M15 12h5a2 2 0 0 1 0 4h-15l-3 -6h3l2 2h3l-2 -7h3z' transform='rotate(-15 12 12) translate(0 -1)')
+                            line(x1='3' y1='21' x2='21' y2='21') 
+                        | #{viaje.fecha_ida}
+                                
+
+                        svg.icon.icon-tabler.icon-tabler-plane-arrival.mx-2(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff4500' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                            path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                            path(d='M15 12h5a2 2 0 0 1 0 4h-15l-3 -6h3l2 2h3l-2 -7h3z' transform='rotate(15 12 12) translate(0 -1)')
+                            line(x1='3' y1='21' x2='21' y2='21')
+                        | #{viaje.fecha_ida}
+
+                    p   
+                        svg.icon.icon-tabler.icon-tabler-users.mr-2(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff4500' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                            path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                            circle(cx='9' cy='7' r='4')
+                            path(d='M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2')
+                            path(d='M16 3.13a4 4 0 0 1 0 7.75')
+                            path(d='M21 21v-2a4 4 0 0 0 -3 -3.85')
+
+                        | #{viaje.disponibles} Disponibles
+                    
+                    p=viaje.descripcion.substr(0,100) + '...'
+
+                    a(href=`viajes/${viaje.slug}`,class="btn btn-success btn-block") Mas información

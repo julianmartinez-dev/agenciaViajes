@@ -21,8 +21,8 @@ h3 {
 }
 
 .btn-success {
-    background-color: #DC135F;
-    border-color: #DC135F;
+    background-color: #ff4500;
+    border-color: #ff4500;
     padding: .8rem 0;
     text-transform: uppercase;
     border-radius: .8rem;
@@ -141,7 +141,7 @@ footer .nav a,
     font-size: .9rem;
 }
 i {
-    color: #DC135F;
+    color: #ff4500;
     font-size: 2rem;
 }
 
@@ -162,7 +162,7 @@ i {
 }
 .blockquote-footer {
     text-align: right;
-    color: #DC135F;
+    color: #ff4500;
     font-weight: bold;
     margin-top: 1rem;
 }
